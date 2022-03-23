@@ -1,0 +1,17 @@
+name = "nhq-api-worker"
+type = "javascript"
+zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
+webpack_config = "webpack.config.js"
+compatibility_date = "2022-02-12"
+
+[build]
+command = "pnpm run build"
+[build.upload]
+format = "service-worker"
+
+[env.production]
+name = "nhq-api"
+webpack_config = "webpack.production.js"
